@@ -1,0 +1,336 @@
+
+/* general styling */
+:root {
+    --smaller: .75;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+body {
+    overflow-x: hidden;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #1c1e2e;
+
+    font-family: "Gadugi", sans-serif;
+}
+
+p strong {
+    color: #30c1ce;
+    font-size: larger;
+}
+
+
+.divTitle {
+    margin: 3%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+.title1 {
+    text-align: center;
+    font-size: min(10vh, 55px);
+    text-shadow: 2px 2px #B0E0EE;
+}
+
+.title2 {
+    padding-left: 10%;
+    font-size: 4vh;
+    text-shadow: 1px 1px #B0E0EE;
+}
+
+.text {
+    margin: 2% 18%;
+    line-height: max(3vh, 30px);
+    font-size: min(2vh, 30px);
+}
+
+.inscription {
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 6%;
+
+    text-shadow: 1px 1px #B0E0EE;
+}
+
+.liText {
+    margin-left: 6%;
+    margin-bottom: 2%;
+    font-size: min(2vh, 30px);
+}
+
+.logo {
+    display: block;
+    width: 36%;
+    margin: 3% auto;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 2% auto;
+    text-align: center;
+
+    font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen-Sans,
+    Ubuntu,
+    Cantarell,
+    "Helvetica Neue",
+    sans-serif;
+}
+
+#headline {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+
+    text-shadow: 1px 1px #B0E0EE;
+}
+
+.liCountdown {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    font-size: 1.5em;
+    list-style-type: none;
+    max-width: 20vw;
+    padding: 1em;
+    text-transform: uppercase;
+
+    text-shadow: 1px 1px #B0E0EE;
+
+}
+
+.liCountdown span {
+    font-size: 4.5em;
+
+    animation: animationLi .25s forwards;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes animationLi {
+    0% {
+        opacity: 0.3;
+        text-shadow: 0 0 #B0E0EE;
+    }
+    60% {
+        text-shadow: 1px 1px #B0E0EE;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media all and (max-width: 768px) {
+    #headline {
+        font-size: calc(1.5rem * var(--smaller));
+    }
+
+    .liCountdown {
+        font-size: calc(1.125rem * var(--smaller));
+    }
+
+    .liCountdown span {
+        font-size: calc(3.375rem * var(--smaller));
+    }
+}
+
+.bouton {
+    height: 10vh;
+    max-height: 80px;
+    width: 40vw;
+    max-width: 400px;
+    display: block;
+    margin: 6% auto;
+
+    cursor: pointer;
+
+    background-image: linear-gradient(180deg, #30c1ce 10%, #e4c343 100%);
+    border: solid 3px #0e606c;
+    border-radius: 15px;
+    color: white;
+    font-size: large;
+    font-stretch: expanded;
+    font-weight: bold;
+
+    box-shadow: 0.06em 0.06em 0.05em 0.05em #B0E0EE;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    animation: floating 1.5s ease-in-out alternate infinite;
+}
+
+@keyframes floating {
+    from {transform: scale(100%)}
+    to {transform: scale(105%)}
+
+}
+
+.bouton:hover {
+    transform: scale(108%);
+    box-shadow: 0.06em 0.06em 0.06em 0.06em #B0E0EE;
+    animation: none;
+}
+
+.bouton:active {
+    transform: scale(102%);
+    box-shadow: 0.06em 0.06em 0.06em 0.06em #89acb6, inset 0 0 0.03em 0.03em black;
+}
+
+.foot {
+    width: available;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: stretch;
+    align-content: flex-end;
+
+
+    font-size: min(2vh, 20px);
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.contactes {
+    width: 100vw;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    z-index: 1;
+    margin: 25px;
+}
+
+.droits {
+    display: flex;
+    justify-content: center;
+    margin-bottom:10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hide {
+    display: none;
+}
+
+.imgForbidden {
+    height: 80px;
+    width: 80px;
+    position: fixed;
+    bottom: 10px;
+    left: -80px;
+    z-index: 0;
+
+    animation-fill-mode: forwards;
+}
+
+.animate {
+    animation: hiThere .4s forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes hiThere {
+    from {transform: rotate(0); left: -80px} to {transform: rotate(50deg); left: -10px}
+}
+
+.positioning {
+    position: relative;
+    width: 0;
+    height: 0;
+}
+
+.socialMediaLogo {
+    height: 20px;
+}
+
+.socialMediaLink {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    color: white;
+}
+a, a:hover, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Ajout de la navbar, fait plus tard ... */
+
+.navbar {
+    display: flex;
+    text-transform: uppercase;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    font-size: min(3vh, 60px);
+    text-shadow: 1px 1px #B0E0EE;
+    color: white;
+  }
+  
+  .navbar a.current {
+    border-bottom: 4px solid #B0E0EE;
+    padding-bottom: 5px;
+  }
+  
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .navbar a {
+      margin-bottom: 10px;
+    }
+  
+    .navbar a:last-child {
+      margin-bottom: 0;
+    }
+  }
