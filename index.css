@@ -334,3 +334,17 @@ a, a:hover, a:visited, a:active {
       margin-bottom: 0;
     }
   }
+
+.sponsors {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    width: 25%;
+    max-width: 1000px;
+    margin-bottom: 30px;
+}
