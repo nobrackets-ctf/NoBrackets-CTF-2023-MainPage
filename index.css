@@ -59,6 +59,18 @@ p strong {
     text-shadow: 1px 1px #B0E0EE;
 }
 
+.titre_sponsor {
+    text-transform: capitalize;
+    padding-top: 100px;
+    text-align: center;
+    font-size: 4vh;
+    text-shadow: 1px 1px #B0E0EE;
+}
+
+.div_sponsor {
+    padding: 5%;
+}
+
 .text {
     margin: 2% 18%;
     line-height: max(3vh, 30px);
@@ -297,6 +309,7 @@ a, a:hover, a:visited, a:active {
     text-decoration: none;
 }
 
+
 /* Ajout de la navbar, fait plus tard ... */
 
 .navbar {
@@ -339,12 +352,16 @@ a, a:hover, a:visited, a:active {
     padding-top: 50px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
     margin: 0 auto;
-    width: 25%;
-    max-width: 1000px;
     margin-bottom: 30px;
+    width: auto;
+    max-width: 50%;
+    max-height: 300px;
+    margin: 3% auto;
+}
+
+
+.pec {
+    background: rgba(255, 255, 255);
+    padding: 10px;
 }
